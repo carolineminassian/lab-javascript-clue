@@ -109,7 +109,13 @@ function selectRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function pickMystery() {}
+function pickMystery() {
+  let mysteryObj = {};
+  mysteryObj.suspect = selectRandom(suspectsArray);
+  mysteryObj.weapon = selectRandom(weaponsArray);
+  mysteryObj.room = selectRandom(roomsArray);
+  return mysteryObj;
+}
 
 // ITERATION 3
 
